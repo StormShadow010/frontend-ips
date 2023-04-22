@@ -1,14 +1,15 @@
 import React from 'react';
 import { Form, Input, Button, Row, Col } from 'antd';
-import logo from '../Images/logo.png'
-import '../Pages/Style.scss'
-import { FiMail, FiLock } from "react-icons/fi";
+import logo from '../../Images/logo.png'
+import './Style.scss'
+import { FiLock, FiUser } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const Datos = (value) => {
         console.log(value)
     };
-
+    const navigate = useNavigate();
     return(
         <div className='container'>
             <div style={{width:'100%'}}>
@@ -25,13 +26,13 @@ function Login() {
                                 autoComplete="off"
                             >
                                 <Form.Item
-                                    name='nombre'
+                                    name='user'
                                     rules={[{ required: true, message: 'Por favor diligencie su usuario!' }]}
                                     size='large'
-                                    label='Email:'
+                                    label='Usuario:'
                                     
                                 >
-                                    <Input  icon={<FiMail />} placeholder="Escribe tu usuario"/>
+                                    <Input  prefix={<FiUser />} placeholder="Escribe tu usuario"/>
                                 </Form.Item>
                                 <Form.Item
                                     name='password'
@@ -39,7 +40,7 @@ function Login() {
                                     size='large'
                                     label='Contraseña:'
                                 >
-                                    <Input.Password icon={<FiMail />} placeholder="Escribe tu contraseña"/>
+                                    <Input.Password prefix={<FiLock />} placeholder="Escribe tu contraseña"/>
                                 </Form.Item>
                                 <Form.Item >
                                     <Button 
@@ -47,6 +48,7 @@ function Login() {
                                         htmlType="submit"
                                         className='estilobotoningresar'
                                         style={{margin:'1em 0'}}
+                                        onClick={()=> navigate('/home')}
                                     >
                                         Ingresar
                                     </Button>
