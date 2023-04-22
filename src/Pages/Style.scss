@@ -21,22 +21,29 @@
     padding: 16px 16px 16px 16px;
     border-radius: 16px;
     width: 80em;
+    .estilobotoningresar{
+        background-image: linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221))!important;
+        border: none!important;
+        border-radius: 10px!important;
+        font-weight: 700;
+        color:aliceblue;
+        width: 100%;
+        }   
+    
+    .estilobotoncancelar{
+        //border-radius: 10px!important;
+        font-weight: 700;
+        width: 100%;
+        background-color: transparent;
+        color: linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221));
+        border: 2px solid linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221));
+
+        &:hover {
+            background-image: linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221));
+            color:#fff;
+            cursor: pointer;
+        }
+
+        }
     }
 
-.estilobotoningresar{
-    background-image: linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221))!important;
-    border: none!important;
-    border-radius: 10px!important;
-    font-weight: 700;
-    color:aliceblue;
-    width: 100%;
-    }
-
-.estilobotoncancelar{
-    background-image: linear-gradient(rgba(0, 118, 193),rgba(60, 181, 221))!important;
-    border: none!important;
-    border-radius: 10px!important;
-    font-weight: 700;
-    color:aliceblue;
-    width: 100%;
-    }
