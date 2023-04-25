@@ -1,6 +1,6 @@
 import React from 'react'
-import "./style.scss"
 import logo from '../../images/logo.png'
+import "./style.scss"
 
 import { Form, Input, Button, Row, Col } from 'antd';
 import { FiLock, FiUser } from "react-icons/fi";
