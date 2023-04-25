@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Row, Col } from 'antd';
 import logo from '../../Images/logo.png'
-import './Style.scss'
+import './style.scss'
 import { FiLock, FiUser } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
 
