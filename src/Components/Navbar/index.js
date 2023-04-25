@@ -1,30 +1,17 @@
-import {Link} from 'react-router-dom'
-import logo from '../../Images/logo.png'
+import logo from '../../images/logo.png'
 import './style.scss'
+import { BsPersonCircle } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='NavbarContainerComponent'>
-            <div className='LogoNavComponent'>
-                <img src={logo} width="320" alt="logo"/>
+            <img src={logo} alt="logo" style={{ marginLeft: '4em' }} />
+            <div style={{ display: 'flex', marginRight: '4em', color: 'white' }}>
+                <BsPersonCircle size={30} onClick={() => navigate('/login')} />
             </div>
-            <div className='NavMenuContainerComponent' >
-                <Link className='NavLink' to='/home'>
-                    <li className='NavItemComponent'>Podcast</li>
-                </Link>
-                <Link className='NavLink'  to='/'>
-                    <li className='NavItemComponent'>Productos</li>
-                </Link>
-                <Link className='NavLink' to='/home'>
-                    <li className='NavItemComponent'>Servicios</li>
-                </Link>
-                <Link className='NavLink' to='/'>
-                    <li className='NavItemComponent'>Equipo Cinndet</li>
-                </Link>
-                <Link className='NavLink' to='/home'>
-                    <li className='NavItemComponent'>Moodle</li>
-                </Link>
-            </div>
-        </div>
+        </div >
     )
 }
